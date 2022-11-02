@@ -36,8 +36,8 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead class="thead">
+                            <table id="actividadapr" class="table table-striped table-hover">
+                                <thead class="thead table-info">
                                     <tr>
                                         <th>No</th>
                                         
@@ -70,8 +70,21 @@
                             <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
                            <script>
                             $(document).ready(function () {
-                                    $('#programa').DataTable({
-                                        "lengthMenu":[[5,10,50, -1], [5,10,50,"All"]]
+                                    $('#actividadapr').DataTable({
+                                        "lengthMenu":[[5,10,50, -1], [5,10,50,"All"]],
+                                        "language": {
+                                        "lengthMenu": "Ver _MENU_ Por pagina",
+                                        "zeroRecords": "Lo sentimos, No se encontró informacion",
+                                        "info": "Pagina _PAGE_ de _PAGES_",
+                                        "infoEmpty": "No se encontraron registros",
+                                        "infoFiltered": "(filtro de _MAX_ Registros totales)",
+                                        "search":"Buscar",
+                                        "paginate":{
+                                            "next":"Siguiente",
+                                            "previous":"Anterior"
+
+                                        }
+                                    }
                                     });
                                 });
                            </script>

@@ -4,13 +4,13 @@
 <link href="{{ asset('/public/css/login.css') }}" rel="stylesheet">
 <!-- [ auth-signin ] start -->
 <div class="auth-wrapper">
-	<div class="auth-content text-center">
-		<img src="{{asset('/images/logo.png')}}" alt="" class="img-fluid mb-4">
+	<div class="auth-content text-center log">
+		
 		<div class="card borderless">
 			<div class="row align-items-center ">
 				<div class="col-md-12">
 					<div class="card-body">
-                 
+                    <img src="{{asset('/images/Sena_logo.svg.png')}}" alt="" class="img-fluid mb-4">
 						<h4 class="mb-3 f-w-400">Iniciar Sesión</h4>
 						<form method="POST" action="{{ route('login') }}">
                         @csrf

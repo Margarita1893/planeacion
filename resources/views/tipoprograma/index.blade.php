@@ -34,8 +34,8 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead class="thead">
+                            <table id="tipoprograma" class="table table-striped table-hover">
+                                <thead class="thead table-info">
                                     <tr>
                                         <th>No</th>
                                         
@@ -68,7 +68,32 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            
+                            @section('js')
+                            <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                            <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+                            <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+                           <script>
+                            $(document).ready(function () {
+                                    $('#tipoprograma').DataTable({
+                                        "lengthMenu":[[5,10,50, -1], [5,10,50,"All"]],
+                                        "language": {
+                                        "lengthMenu": "Ver _MENU_ Por pagina",
+                                        "zeroRecords": "Lo sentimos, No se encontró informacion",
+                                        "info": "Pagina _PAGE_ de _PAGES_",
+                                        "infoEmpty": "No se encontraron registros",
+                                        "infoFiltered": "(filtro de _MAX_ Registros totales)",
+                                        "search":"Buscar",
+                                        "paginate":{
+                                            "next":"Siguiente",
+                                            "previous":"Anterior"
+
+                                        }
+                                    }
+                                    });
+                                });
+                           </script>
+
+                            @endsection
                         </div>
                     </div>
                 </div>
